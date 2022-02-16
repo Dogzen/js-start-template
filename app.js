@@ -26,4 +26,18 @@ logo.onclick = function (e) {
   // Man kan hämta andra objekt/element ur DOMen och manipulera även dem.
   // Här togglar vi en css-klass på bodyn.
   document.body.classList.toggle("pitch-black")
+  var myobj = document.getElementById("js-logo");
+  myobj.remove();
+  document.body.style.backgroundColor = "red";
+  function randomize() {
+    var rgbcolor;
+    red = Math.floor(Math.random() * 250 + 0);
+    green = Math.floor(Math.random() * 250 + 0);
+    blue = Math.floor(Math.random() * 250 + 0);
+
+    rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+    document.body.style.background = rgbColor;
+  }
+
+  randomize();
 }
